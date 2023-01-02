@@ -1,0 +1,339 @@
+.Background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color1_75);
+}
+
+.Modal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color1);
+  border: var(--border_color3_2px);
+}
+
+.Title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: var(--color1);
+}
+
+.Title h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-grow: 1;
+  margin: 0;
+  color: var(--font_color_light);
+  font-size: var(--font_size_edit_task_title_small);
+}
+
+.ReturnButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60px;
+  cursor: pointer;
+  border: var(--border_color3_2px);
+  border-top: 0;
+  border-left: 0;
+}
+
+.ReturnButton img {
+  width: 25px;
+}
+
+.ReturnButton:hover {
+  background-color: var(--color3);
+}
+
+.Dummy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60px;
+}
+
+.LoaderContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+  background-color: transparent;
+}
+
+.LoaderAndFormGroup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+}
+
+.EditTaskForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.InputGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+  margin: 10px;
+} 
+
+.Label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  color: var(--color5);
+  font-size: var(--font_size_input_label_small);
+  margin-bottom: 5px;
+}
+
+.ID {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: var(--disabled_color);
+  padding: 5px;
+}
+
+.ID p {
+  color: var(--font_color_dark);
+  margin: 0;
+  font-size: var(--font_size_input_text_small)
+}
+
+.InputGroup .InputText {
+  height: 60px;
+  width: 100%;
+  background-color: var(--color5);
+  outline: none;
+  border: var(--border_color5);
+  padding: 5px;
+  font-size: var(--font_size_input_text_small)
+}
+
+.InputGroup .InputText:focus {
+  box-shadow: var(--input_focus_box_shadow);
+} 
+
+.Checkbox .Label {
+  justify-content: center;
+  font-size: var(--font_size_input_label_small);
+}
+
+.Checkbox {
+  cursor: pointer;
+}
+
+.Checkbox span {
+  width: 100%;
+}
+
+input.InputCheckbox {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  height: 60px;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.Button button {
+  height: 100%;
+  width: 100%;
+  background-color: var(--color2);
+  border: var(--border_color2);
+  color: var(--color5);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.Button button:hover {
+  border: 1px solid var(--color5);
+  color: var(--color5);
+}
+
+.Button button:disabled {
+  background-color: var(--disabled_color);
+  border: var(--border_disabled-color);
+  color: var(--font_color_dark);
+}
+
+.Button button p {
+  font-size: var( --font_size_button_small);
+  margin: 0;
+}
+
+@media (orientation: landscape) and (max-width: 767px) {
+  .Background {
+    justify-content: flex-start;
+  }
+  
+  .Modal {
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+  }
+  
+  .Title {
+    height: 50px;
+  }
+  
+  .InputGroup {
+    height: 60px;
+    margin: 5px;
+  } 
+  
+  .Label {
+    height: 30px;
+  }
+  
+  .ID {
+    height: 30px;
+  }
+  
+  .InputGroup .InputText {
+    height: 30px;
+  }
+  
+  input.InputCheckbox {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+  }
+  
+  .Button {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    height: 30px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+} 
+
+/* TABLET */
+@media (min-width: 768px) {
+  .Modal {
+    width: 650px;
+    height: 650px;
+  }
+
+  .ReturnButton img {
+    width: 35px;
+  }
+
+  .Title h2 {
+    font-size: var(--font_size_edit_task_title_medium);
+  }
+
+  .LoaderAndFormGroup {
+    width: 85%;
+  }
+
+  .InputGroup {
+    margin-bottom: 10px;
+    margin: 0;  
+  } 
+
+  .Label {
+    margin-bottom: 0;
+    font-size: var(--font_size_input_label_medium);
+  }
+
+  .ID p {
+    font-size: var(--font_size_input_text_medium)
+  }
+  
+  .InputGroup .InputText {
+    font-size: var(--font_size_input_text_medium)
+  }
+
+  .Checkbox {
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+  }
+
+  .Checkbox .Label {
+    justify-content: center;
+    font-size: var(--font_size_input_label_medium);
+  }
+
+  .Checkbox span {
+    width: 30%;
+  }
+
+  .Button {
+    width: 85%;
+    margin-bottom: 25px;
+  }
+  
+  .Button button p {
+    font-size: var(--font_size_button_medium);
+  }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .Background {
+    align-items: flex-start;
+  }
+  .Modal {
+    width: 100%;
+    overflow: auto;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+/* PC */
+@media (min-width: 1366px) {
+  .Background {
+    align-items: center;
+  }
+  .Modal {
+    width: 650px;
+    height: 650px;
+    overflow: auto;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}

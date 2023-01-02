@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Mina&display=swap'); 
+
+:root {
+  /* colors: */
+  --color1:rgba(33, 5, 53);
+  --color1_75: rgba(33, 5, 53, 0.75);
+  --color2: rgb(67, 13, 75);
+  --color3: #7b337d;
+  --color3_50: rgb(123, 51, 125, 0.5);
+  --color4: rgb(200, 116, 178);
+  --color5: rgb(245, 213, 224);
+  --color5_50: rgb(245, 213, 224, 0.5);
+  --font_color_light: white;
+  --font_color_dark: black;
+  --font_color_placeholder: rgb(91, 91, 91); 
+  --disabled_color: rgb(166, 162, 162);
+
+  /* font-size */
+  --font_size_header_small: 1.8rem;
+  --font_size_header_medium: 2.2rem;
+  
+  --font_size_edit_task_title_small: 1.6rem;
+  --font_size_edit_task_title_medium: 2rem;
+
+  --font_size_char_count_small: 0.8rem;
+  --font_size_char_count_medium: 1rem;
+
+  --font_size_status_message_small: 1.2rem;
+  --font_size_status_message_medium: 1.4rem;
+
+  --font_size_input_label_small: 1.2rem;
+  --font_size_input_label_medium: 1.4rem;
+  
+  --font_size_input_text_small: 1.1rem;
+  --font_size_input_text_medium: 1.3rem;
+
+  --font_size_button_small: 1.2rem;
+  --font_size_button_medium: 1.4rem;
+  
+  /* borders */
+  --border_color1: 1px solid var(--color1);
+  --border_color2: 1px solid var(--color2);
+  --border_color3: 1px solid var(--color3);
+  --border_color3_2px: 2px solid var(--color3);
+  --border_color4: 1px solid var(--color4);
+  --border_color5: 1px solid var(--color5);
+  --border_disabled-color: 1px solid var(--disabled_color);
+
+  /* z-index top-bottom */
+  --z_1: 1;
+  --z_2: 2;
+  --z_4: 4;
+  --z_6: 6;
+  --z_8: 8;
+  --z_10: 10;
+  /* box shadow */
+  --input_focus_box_shadow: 0px 0px 25px 0.5px rgb(255, 255, 255, 0.25);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#root {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mina', sans-serif;
+}
+
+html {
+  height: 100%; 
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+}

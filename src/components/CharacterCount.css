@@ -1,0 +1,30 @@
+.CharacterCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 100%;
+}
+
+.CharacterCount p {
+  color: var(--color5);
+  font-size: var(--font_size_char_count_small);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .CharacterCount {
+    height: 50px;
+    width: 100%;
+  }
+  
+  .CharacterCount p {
+    font-size: var(--font_size_char_count_medium);
+  }
+}
+
+/* @media (min-width: 1366px) {
+  .CharacterCount p {
+
+  }
+} */

@@ -1,0 +1,101 @@
+.TaskEntry {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 95%;
+  height: 200px;
+  background-color: var(--color5);
+  margin: 20px;
+  border: var(--border_color3_2px);
+}
+
+.Task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  height: 100%;
+  word-wrap: break-word;
+  padding: 10px;
+}
+
+.Task p {
+  font-size: clamp(1.2rem, 1.4rem, 1.6rem);
+  text-align: justify;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.Completed {
+  background-color: var(--disabled_color);
+}
+
+.Completed p {
+  text-decoration: line-through;
+}
+
+.TaskControl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 15%;
+  height: 100%;
+}
+
+.ControlElem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: var(--color5);
+  border-left: var(--border_color3_2px);
+}
+
+.ControlElem img {
+  width: 25px;
+  height: auto;
+}
+
+.ControlElem:hover {
+  background-color: var(--color3);
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .TaskEntry {
+    width: 95%;
+  }
+
+  .ControlElem img {
+    width: 35px;
+    height: auto;
+  }
+}
+
+/* PC */
+@media (min-width: 1366px) {
+  .TaskEntry {
+    width: 100%;
+  }
+
+  .Task {
+    width: 90%;
+  }
+
+  .Task p {
+    font-size: clamp(1.2rem, 1.4rem, 1.6rem);
+  }
+
+  .TaskControl {
+    width: 10%;
+  }
+
+  .ControlElem img {
+    width: 35px;
+  }
+}

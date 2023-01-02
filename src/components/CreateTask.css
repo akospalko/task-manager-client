@@ -1,0 +1,108 @@
+.SubmitTask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 95%;
+  border: var(--border_color3_2px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2.5%;
+  right: 2.5%;
+  background-color: var(--color1);
+}
+
+.SubmitTask form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 100px;
+}
+
+.SubmitTask input {
+  height: 60px;
+  margin: 0;
+  width: 75%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 5px;
+  font-size: var(--font_size_input_text_small);
+  outline: none;
+  border: var(--border_color5);
+  background-color: var(--color5);
+  color: var(--color1);
+}
+
+.SubmitTask input:focus {
+  box-shadow: var(--input_focus_box_shadow);
+} 
+
+.SubmitTask input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--font_color_placeholder);
+  opacity: 1; /* Firefox */
+}
+
+.SubmitTask input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--font_color_placeholder);
+}
+
+.SubmitTask input::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--font_color_placeholder);
+}
+
+.SubmitTask button {
+  width: 25%;
+  height: 60px;
+  background-color: var(--color2);
+  border: var( --border_color5);
+  border-left: 0;
+  font-weight: 500;
+  color: var(--color5);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.SubmitTask button:hover {
+  border: var(--border_color2);
+  border-left: 0;
+}
+
+.SubmitTask button:disabled {
+  background-color: var(--disabled_color);
+  border: var(--border_disabled-color);
+  color: var(--font_color_dark);
+}
+
+.SubmitTask button p {
+ font-size: var(--font_size_button_small);
+ margin: 0;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .SubmitTask form {
+    width: 95%;
+  }
+
+  .SubmitTask input {
+    font-size: var(--font_size_input_text_medium);
+  }
+  
+  .SubmitTask button {
+    width: 125px;
+  }
+
+  .SubmitTask button p {
+    font-size: var(--font_size_button_medium);
+   }
+}
+
+/* PC */
+@media (min-width: 1366px) {
+  .SubmitTask button {
+    width: 100px;
+  }
+}
