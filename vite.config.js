@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// const baseURL = 'https://task-manager-api-ywz0.onrender.com' //api base url hosted on render.com 
-const baseURL = '' //api base url hosted on render.com 
+const baseURL = 'https://task-manager-api-ywz0.onrender.com' //api base url hosted on render.com 
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {

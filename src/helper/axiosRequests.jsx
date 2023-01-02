@@ -85,8 +85,8 @@ export const patchTask = async (activeID, taskEntry) => {
 
 export const deleteTask = async (activeID) => { 
   if(!activeID) return;
-  const res = await axios.delete(`${baseURL}/api/v1/tasks/${activeID}`)
   try {
+    const res = await axios.delete(`${baseURL}/api/v1/tasks/${activeID}`)
     if(String(res.status)[0] === '2') {
       return DELETE_TASK_SUCCESS;
     } 

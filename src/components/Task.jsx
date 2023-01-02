@@ -14,7 +14,7 @@ export default function Task( {task, taskID} ) {
   const { setIsLoading } = useLoaderContext();
   const [isModalDisplayed, setIsModalDisplayed] = useState(false); 
 
-  //hanlders
+  //handlders
   const toggleModalHandler = () => {
     setIsModalDisplayed(prev => !prev)
     if(activeID) {
