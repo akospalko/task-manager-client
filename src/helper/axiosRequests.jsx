@@ -22,7 +22,7 @@ const baseURL = 'https://task-manager-api-ywz0.onrender.com'; //api endpoint
 export const getDbValidation = async () => {
   let customResponseObj = {};
   try {
-    const res = await axios.get('/api/v1/schema');
+    const res = await axios.get(`${baseURL}/api/v1/schema`);
     if(String(res.status)[0] === '2') {
       customResponseObj = { data: res.data, resStatusMessage: GET_VALIDATION_SUCCESS };
     } 
