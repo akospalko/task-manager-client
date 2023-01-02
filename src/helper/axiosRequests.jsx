@@ -15,6 +15,9 @@ import {
   GET_VALIDATION_FAILED,
 } from './statusMessages';
 
+
+const baseURL = 'https://task-manager-api-ywz0.onrender.com'; //api endpoint
+
 //GET db validation data (mongo db -> mongoose schema -> task validation data)
 export const getDbValidation = async () => {
   let customResponseObj = {};
@@ -31,7 +34,7 @@ export const getDbValidation = async () => {
 
 export const getAllTasks = async () => {
   let customResponseObj = {};
-  const res = await axios.get('/api/v1/tasks');
+  const res = await axios.get(`${baseURL}/api/v1/tasks`);
   try {
     if(String(res.status)[0] === '2') {
       customResponseObj = { data: res.data.tasks, resStatusMessage: GET_ALL_TASKS_SUCCESS };
@@ -46,7 +49,7 @@ export const getTask = async (activeID) => {
   let customResponseObj = {};
   if(!activeID) return;
   try { 
-    const res = await axios.patch(`/api/v1/tasks/${activeID}`)
+    const res = await axios.patch(`${baseURL}/api/v1/tasks/${activeID}`)
     if(String(res.status)[0] === '2') {
       customResponseObj = { data: res.data.task, resStatus: GET_TASK_SUCCESS }
     } 
@@ -59,7 +62,7 @@ export const getTask = async (activeID) => {
 export const postTask = async (activeID, taskEntry) => {
   if(!activeID && !taskEntry) return;
   try {
-    const res = await axios.post('/api/v1/tasks', taskEntry)
+    const res = await axios.post(`${baseURL}/api/v1/tasks`, taskEntry)
     if(String(res.status)[0] === '2') {
       return CREATE_TASK_SUCCESS; 
     } 
@@ -71,7 +74,7 @@ export const postTask = async (activeID, taskEntry) => {
 export const patchTask = async (activeID, taskEntry) => {
   if(!activeID && !taskEntry) return;
   try { 
-    const res = await axios.patch(`/api/v1/tasks/${activeID}`, taskEntry)
+    const res = await axios.patch(`${baseURL}/api/v1/tasks/${activeID}`, taskEntry)
     if(String(res.status)[0] === '2') {
       return UPDATE_TASK_SUCCESS;
     } 
@@ -82,7 +85,7 @@ export const patchTask = async (activeID, taskEntry) => {
 
 export const deleteTask = async (activeID) => { 
   if(!activeID) return;
-  const res = await axios.delete(`/api/v1/tasks/${activeID}`)
+  const res = await axios.delete(`${baseURL}/api/v1/tasks/${activeID}`)
   try {
     if(String(res.status)[0] === '2') {
       return DELETE_TASK_SUCCESS;
