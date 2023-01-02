@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useState, useEffect } from 'react'
+import React, { createContext, useContext, useState, useEffect } from 'react'
 import { EMPTY, CREATE_TASK_DEFAULT, UPDATE_TASK_DEFAULT } from '../helper/statusMessages';
 import updateState from '../helper/updateState';
 import { patchTask, postTask, getDbValidation } from '../helper/axiosRequests';
@@ -36,6 +36,7 @@ export default function FormDataLayout({ children }) {
     return async () => {
       const res = await getDbValidation();
       const { data, resStatusMessage } = res;
+      console.log(data)
       setValidationData(data);
       updateState(setStatusMessage, 'getDbValidation', resStatusMessage);
     }
